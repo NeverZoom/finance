@@ -1,0 +1,49 @@
+.adv_wrapper
+  background: #1D1814
+  padding: 96px 0 62px 0
+  color: white
+  h2
+    margin-bottom: 64px
+  .grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 20px 20px
+    grid-auto-flow: row
+    grid-template-areas: "one two three" "four four three" "five six seven"
+  .one
+    grid-area: one
+  .two
+    grid-area: two
+  .three
+    grid-area: three
+  .four
+    grid-area: four
+  .five
+    grid-area: five
+  .six
+    grid-area: six
+  .seven
+    grid-area: seven
+    background: linear-gradient(90deg, #262835 2.14%, rgba(38, 40, 53, 0) 100%) !important
+  .card
+    background: #262835
+    border-radius: 20px
+    padding: 40px 24px 0 24px
+    color: white
+    h4
+      font-weight: 500
+      line-height: 32px
+      color: white
+      margin-bottom: 8px
+    p
+      color: white
+  .four
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  .two, .three, .six
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end

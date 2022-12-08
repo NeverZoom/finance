@@ -1,0 +1,65 @@
+// USER VARIABLES SECTION
+
+$accent: #EB6D2D // Accent Color
+$accent2: #7B6EE4
+$secondaryDark: #1B2238
+$secondaryLight: #3F4260
+$fontsize: 16px // Body Font Size
+$textcolor: rgba(0, 0, 0, 0.8) // Text Color
+$light: #F9F9F9
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 26px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/slick-carousel/slick/slick.scss' // slick carousel
+@import 'node_modules/slick-carousel/slick/slick-theme.scss' // slick carousel
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/Roboto-Regular.woff2')
+@include font('roboto-oh5', normal, 500, '../fonts/Roboto-Medium.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/Roboto-Bold.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	background: $light
