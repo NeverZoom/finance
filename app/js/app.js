@@ -6,6 +6,13 @@ import 'slick-carousel/slick/slick.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	$('.burger').on('click', () => {
+		$('.menu').addClass('active');
+	});
+	$('.close').on('click', () => {
+		$('.menu').removeClass('active');
+	});
+
 	$('.product_slider').slick({
 		infinite: true,
 		slidesToShow: 1,
