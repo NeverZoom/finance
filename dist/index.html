@@ -348,14 +348,18 @@
       </div>
       <div class="col-xl-4 col-lg-5">
         <form>
-          <input type="text" placeholder="Введите ФИО">
-          <input type="text" placeholder="Введите номер телефона">
-          <textarea placeholder="Ваш вопрос"></textarea>
+          <input type="text" placeholder="Введите ФИО" name="fio">
+          <input type="text" placeholder="Введите номер телефона" name="phone">
+          <textarea placeholder="Ваш вопрос" name="text"></textarea>
           <label>
             <input type="checkbox">
             <h6>Даю согласие на обработку персональных данных в соответствии с <a href="">Политикой конфиденциальности</a></h6>
           </label>
           <button class="button accent">Отправить заявку</button>
+
+          <input type="hidden" value="название проекта" name="project_name">
+          <input type="hidden" value="почта администратора" name="admin_email">
+          <input type="hidden" value="тема письма" name="form_subject">
         </form>
       </div>
     </div>
