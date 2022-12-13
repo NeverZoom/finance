@@ -63,4 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.success').removeClass('active').fadeOut();
 	});
 
+	$('.case__wrapper .block').on('click', 'a', function () {
+		// $(this).css('display', 'none');
+		$(this).parent().parent().addClass('active');
+	});
+
 })
