@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.close').on('click', () => {
 		$('.menu').removeClass('active');
 	});
+	$('.menu a').on('click', () => {
+		$('.menu').removeClass('active');
+	});
 
 	$('.product_slider').slick({
 		infinite: true,
